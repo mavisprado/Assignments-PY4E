@@ -3,10 +3,9 @@ fh = open(fname)
 lst = list()
 
 for line in fh:
-    rd = line.strip()
-    div = line.split()
-    elements = lst.append(div)
-
+    words = line.split()
+    for i in words:
+        if i not in lst:
+            total = lst.append(i)
 lst.sort()
-
 print(lst)
